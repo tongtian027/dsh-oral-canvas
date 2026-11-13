@@ -17,13 +17,16 @@
 作为 DSH 插件安装（host 半负责生成/合成，client 半是画布面板）：
 
 ```bash
-# 方式一：从本仓库本地目录安装（推荐）
-# 在 DSH 里让 Agent 执行：plugin_manager install_bundle，目标填本仓库目录的绝对路径
-# 或者手动：把下面的路径加进 ~/.dsh/profiles/<profile>/package.json 的 dependencies + dsh.profile.bundles
+# 方式一：克隆后安装本地目录（推荐）
+git clone https://github.com/tongtian027/dsh-oral-canvas.git
+# 然后在 DSH 里让 Agent 用 plugin_manager install_bundle 指向这个目录，
+# 或手动把路径加进 ~/.dsh/profiles/<profile>/package.json 的 dependencies + dsh.profile.bundles
 
 # 方式二：npm 从 git 安装
-npm install github:<你的用户名>/dsh-oral-canvas
+npm install github:tongtian027/dsh-oral-canvas
 ```
+
+国内访问 GitHub 慢的话，给 git 配个代理即可：`git config --global http.proxy http://127.0.0.1:7890`。
 
 依赖：DSH 0.2.x（client slots `main` / `sidebar.panellist`）、Node 20+、可选 ffmpeg（合成与字幕烧录）。
 
