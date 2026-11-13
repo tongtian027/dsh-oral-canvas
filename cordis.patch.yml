@@ -1,0 +1,4 @@
+# dsh-oral-canvas profile patch: one loader entry for the package.
+- insert:
+    - id: oral-canvas
+      name: 'dsh-oral-canvas'
